@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #0f0f1a;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.logo {
+  color: #7f5af0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar li:hover {
+  color: #7f5af0;
+}
+
+/* Hero Section */
+.hero {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero h1 span {
+  color: #7f5af0;
+}
+
+.hero h2 {
+  font-weight: 400;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #bdbdbd;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #7f5af0, #2cb67d);
+  color: #fff;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+}
+
+.outline {
+  border: 2px solid #7f5af0;
+  color: #7f5af0;
+}
+
+.outline:hover {
+  background: #7f5af0;
+  color: #fff;
+}
+/* About Section */
+.about {
+  padding: 80px;
+  background: #121212;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #7f5af0;
+}
+
+.about p {
+  max-width: 800px;
+  line-height: 1.7;
+  color: #cfcfcf;
+}
+
+/* Skills Section */
+.skills {
+  padding: 80px;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #7f5af0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #1a1a2e;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(127, 90, 240, 0.4);
+}
+/* Projects Section */
+.projects {
+  padding: 80px;
+  background: #0f0f1a;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #7f5af0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(127, 90, 240, 0.4);
+}
+
+.project-card h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+  margin-bottom: 15px;
+}
+
+.project-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: #7f5af0;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  color: #2cb67d;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* Education */
+.education {
+  padding: 80px;
+  background: #121212;
+}
+
+.education h2 {
+  color: #7f5af0;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.edu-card {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+}
+
+/* Contact */
+.contact {
+  padding: 80px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #7f5af0;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-links a {
+  color: #2cb67d;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn.outline {
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background: #7f5af0;
+  color: #fff;
 }

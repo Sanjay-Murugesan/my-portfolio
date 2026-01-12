@@ -1,23 +1,74 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="app">
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <h2 className="logo">Sanjay</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section className="hero" id="home">
+        <h1>
+          Hi, I'm <span>Sanjay</span>
+        </h1>
+
+        <h2>IT Student | Full Stack Developer</h2>
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I build modern web applications using React, Java, Spring Boot and
+          MySQL.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+       <div className="buttons">
+  <a href="#projects" className="btn primary">View Projects</a>
+  <a href="#contact" className="btn outline">Contact Me</a>
+  <a href="/Sanjay_Resume.pdf" className="btn outline" target="_blank" rel="noreferrer">
+    Download Resume
+  </a>
+</div>
+
+      </section>
+
+      {/* ABOUT */}
+      <section id="about">
+        <About />
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills">
+        <Skills />
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects">
+        <Projects />
+      </section>
+
+      {/* EDUCATION */}
+      <section id="education">
+        <Education />
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 }
