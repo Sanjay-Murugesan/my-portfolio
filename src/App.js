@@ -6,10 +6,18 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import Home from "./components/Home";
+
+import useScrollEffects from "./hooks/useScrollEffects";
 
 function App() {
+
+  // 🔥 All scroll & navbar logic here
+  useScrollEffects();
+
   return (
     <div className="app">
+
       {/* NAVBAR */}
       <nav className="navbar">
         <h2 className="logo">Sanjay</h2>
@@ -18,57 +26,34 @@ function App() {
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      {/* HERO SECTION */}
-      <section className="hero" id="home">
-        <h1>
-          Hi, I'm <span>Sanjay</span>
-        </h1>
+      {/* SECTIONS */}
+      <Home />
 
-        <h2>IT Student | Full Stack Developer</h2>
-
-        <p>
-          I build modern web applications using React, Java, Spring Boot and
-          MySQL.
-        </p>
-
-       <div className="buttons">
-  <a href="#projects" className="btn primary">View Projects</a>
-  <a href="#contact" className="btn outline">Contact Me</a>
-  <a href="/Sanjay_Resume.pdf" className="btn outline" target="_blank" rel="noreferrer">
-    Download Resume
-  </a>
-</div>
-
-      </section>
-
-      {/* ABOUT */}
-      <section id="about">
+      <section id="about" className="reveal">
         <About />
       </section>
 
-      {/* SKILLS */}
-      <section id="skills">
+      <section id="skills" className="reveal">
         <Skills />
       </section>
 
-      {/* PROJECTS */}
-      <section id="projects">
+      <section id="projects" className="reveal reveal-left">
         <Projects />
       </section>
 
-      {/* EDUCATION */}
-      <section id="education">
+      <section id="education" className="reveal reveal-right">
         <Education />
       </section>
 
-      {/* CONTACT */}
-      <section id="contact">
+      <section id="contact" className="reveal">
         <Contact />
       </section>
+
     </div>
   );
 }
