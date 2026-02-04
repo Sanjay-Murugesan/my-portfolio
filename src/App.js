@@ -7,6 +7,10 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
+import WhyMe from "./components/HowIAddValue";
+import MyJourney from "./components/MyJourney";
+import HowIWork from "./components/HowIWork";
+import HowIAddValue from "./components/HowIAddValue";
 
 import useScrollEffects from "./hooks/useScrollEffects";
 
@@ -38,6 +42,20 @@ function App() {
         <About />
       </section>
 
+      <section id="work">
+      <HowIWork />
+      </section>
+
+      <section id="journey">
+      <MyJourney />
+      </section>
+
+
+      {/* HOW I ADD VALUE (replaces Why Me) */}
+<section id="value">
+  <HowIAddValue />
+</section>
+
       <section id="skills" className="reveal">
         <Skills />
       </section>
@@ -46,9 +64,9 @@ function App() {
         <Projects />
       </section>
 
-      <section id="education" className="reveal reveal-right">
-        <Education />
-      </section>
+      <section id="education">
+  <Education />
+</section>
 
       <section id="contact" className="reveal">
         <Contact />

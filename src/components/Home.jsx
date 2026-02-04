@@ -14,11 +14,14 @@ const Home = () => {
 
           <h2>Pre-Final Year B.Tech IT Student | Full Stack Developer</h2>
 
-          <p className="hero-intro">
-            I’m a pre-final year Information Technology student at
-            emphasising Sri Krishna College of Technology, passionate about
-            building efficient, scalable, and user-friendly applications.
-          </p>
+         <p className="hero-intro">
+  I’m a pre-final year Information Technology student at
+  <strong> Sri Krishna College of Technology</strong>, passionate about
+  building <span>efficient</span>, <span>scalable</span>, and
+  <span> user-friendly</span> web applications.
+  I enjoy turning ideas into real-world products using modern
+  full-stack technologies.
+</p>
 
       
 
