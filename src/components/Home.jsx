@@ -28,9 +28,9 @@ const Home = () => {
           <div className="hero-actions">
   <a href="#projects">View Projects</a>
   <a href="#contact">Contact Me</a>
-  <a href="/Sanjay_Resume.pdf" target="_blank" rel="noreferrer">
-    Download Resume
-  </a>
+  <a href={process.env.PUBLIC_URL + "/Sanjay_M_CV.pdf"} target="_blank" rel="noreferrer">
+  Download Resume
+</a>
 </div>
 
         </div>
