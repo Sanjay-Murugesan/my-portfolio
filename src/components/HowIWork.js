@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-import "./HowIWork.css"
+import "./HowIWork.css";
 
 function HowIWork() {
 
   useEffect(() => {
     const cards = document.querySelectorAll(".how-card");
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         }
       });
     }, { threshold: 0.2 });
 
-    cards.forEach(card => observer.observe(card));
+    cards.forEach((card) => observer.observe(card));
   }, []);
 
   return (
@@ -23,7 +23,7 @@ function HowIWork() {
 
       <div className="how-container">
 
-        <div className="how-card">
+        <div className="how-card big">
           <h3>🧠 Problem Understanding</h3>
           <p>I analyze problems deeply, break them into logical steps, and plan structured solutions before coding.</p>
         </div>
@@ -33,7 +33,7 @@ function HowIWork() {
           <p>I design responsive, clean, and user-friendly interfaces with focus on usability and visual balance.</p>
         </div>
 
-        <div className="how-card">
+        <div className="how-card wide">
           <h3>⚙️ Backend Development</h3>
           <p>I develop secure REST APIs using Java & Spring Boot and manage databases efficiently.</p>
         </div>
@@ -48,7 +48,7 @@ function HowIWork() {
           <p>I test thoroughly, debug errors, and optimize performance for reliable applications.</p>
         </div>
 
-        <div className="how-card">
+        <div className="how-card big">
           <h3>🚀 Continuous Improvement</h3>
           <p>I constantly learn modern tools and best practices to grow as a developer.</p>
         </div>
