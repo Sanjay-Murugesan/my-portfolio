@@ -34,14 +34,4 @@ I enjoy building real-world projects using modern technologies and continuously 
 - Easy navigation  
 - Beginner-friendly structure  
 
----
 
-## 🛠️ Tech Stack
-
-- HTML5  
-- CSS3  
-- (Add JS if used)  
-
----
-
-## 📂 Project Structure
