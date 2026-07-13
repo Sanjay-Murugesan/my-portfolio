@@ -291,6 +291,17 @@ html {
   background: rgba(3, 250, 168, 0.12);
 }
 
+.hero-image:hover .orbit-ring{
+
+animation:ringSpin 2s linear infinite;
+
+}
+
+.hero-image:hover .particle{
+
+animation:orbit 2s linear infinite;
+
+}
 /* ================= ABOUT ================= */
 .about-unique {
   padding: 100px 20px;

@@ -23,11 +23,11 @@ const Contact = () => {
           </p>
 
           <div className="contact-links">
-            <a href="mailto:yourmail@gmail.com">📧 Email</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a href="mailto:mssanjay4444@gmail.com">📧 Email</a>
+            <a href="https://github.com/Sanjay-Murugesan/" target="_blank" rel="noreferrer">
               💻 GitHub
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/sanjay-murugesan-77b23127a/" target="_blank" rel="noreferrer">
               🔗 LinkedIn
             </a>
           </div>

@@ -37,8 +37,22 @@ const Home = () => {
 
         {/* RIGHT – IMAGE */}
         <div className="hero-image">
-          <img src={profile} alt="Sanjay Murugesan" />
-        </div>
+
+    <div className="orbit-ring"></div>
+
+    <div className="orbit-ring ring2"></div>
+
+    <div className="particle particle1"></div>
+    <div className="particle particle2"></div>
+    <div className="particle particle3"></div>
+
+    <img
+      src={profile}
+      alt="Sanjay Murugesan"
+      className="profile-image"
+    />
+
+</div>
 
       </div>
     </section>
