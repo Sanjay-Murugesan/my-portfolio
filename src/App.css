@@ -367,7 +367,17 @@ animation:orbit 2s linear infinite;
 
 /* Cards */
 .about-block {
-  background: rgba(255,255,255,0.05);
+background:linear-gradient(
+120deg,
+#7C5CFF,
+#5B8CFF,
+#3DD9FF,
+#7C5CFF
+);
+
+border:
+
+1px solid rgba(124,92,255,.12);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 18px;
