@@ -12,26 +12,26 @@ const Home = () => {
             Hi, I’m <span>Sanjay Murugesan</span>
           </h1>
 
-          <h2>Pre-Final Year B.Tech IT Student | Full Stack Developer</h2>
+          <h2>Final Year B.Tech IT Student | Full Stack Developer</h2>
 
-         <p className="hero-intro">
-  I’m a pre-final year Information Technology student at
-  <strong> Sri Krishna College of Technology</strong>, passionate about
-  building <span>efficient</span>, <span>scalable</span>, and
-  <span> user-friendly</span> web applications.
-  I enjoy turning ideas into real-world products using modern
-  full-stack technologies.
-</p>
+          <p className="hero-intro">
+            I’m final year Information Technology student at
+            <strong> Sri Krishna College of Technology</strong>, passionate about
+            building <span>efficient</span>, <span>scalable</span>, and
+            <span> user-friendly</span> web applications.
+            I enjoy turning ideas into real-world products using modern
+            full-stack technologies.
+          </p>
 
-      
+
 
           <div className="hero-actions">
-  <a href="#projects">View Projects</a>
-  <a href="#contact">Contact Me</a>
-  <a href={process.env.PUBLIC_URL + "/Sanjay_M_CV.pdf"} target="_blank" rel="noreferrer">
-  Download Resume
-</a>
-</div>
+            <a href="#projects">View Projects</a>
+            <a href="#contact">Contact Me</a>
+            <a href={process.env.PUBLIC_URL + "/Sanjay_M_CV.pdf"} target="_blank" rel="noreferrer">
+              Download Resume
+            </a>
+          </div>
 
         </div>
 
