@@ -1,711 +1,409 @@
 /* ===========================================================
                     GITHUB CONTRIBUTIONS
-            Premium Developer Portfolio Theme
+            Dashboard - Green & Gray Theme
 =========================================================== */
 
 :root {
-
-    --github-bg: #090b13;
-    --github-card: #161828;
-    --github-card-2: #1b1d30;
-
-    --github-border: rgba(255, 255, 255, .08);
-
-    --github-purple: #7C5CFF;
-    --github-blue: #5B8CFF;
-    --github-cyan: #3DD9FF;
-
-    --github-white: #ffffff;
-    --github-text: #CBD5F5;
-
+    --github-bg: #0d1117;
+    --github-card: #161b22;
+    --github-card-2: #1c2333;
+    --github-border: #30363d;
+    --github-green: #2ea043;
+    --github-green-dark: #1a7f37;
+    --github-green-light: #56d364;
+    --github-text: #c9d1d9;
+    --github-text-dim: #8b949e;
+    --github-white: #f0f6fc;
 }
 
 /* ===========================================================
                     SECTION
 =========================================================== */
-
 .github-calendar-section {
-
     position: relative;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-    padding: 110px 30px;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at top left,
-            rgba(124, 92, 255, .16),
-            transparent 35%),
-
-        radial-gradient(circle at bottom right,
-            rgba(61, 217, 255, .10),
-            transparent 35%),
-
-        var(--github-bg);
-
-}
-
-/* ===========================================================
-                    BACKGROUND GLOW
-=========================================================== */
-
-.github-calendar-section::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 620px;
-    height: 620px;
-
-    left: -260px;
-    top: -260px;
-
-    border-radius: 50%;
-
-    background:
-
-        radial-gradient(circle,
-            rgba(124, 92, 255, .28),
-            transparent 70%);
-
-    filter: blur(80px);
-
-    animation: auroraLeft 14s ease-in-out infinite;
-
-}
-
-.github-calendar-section::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 650px;
-    height: 650px;
-
-    right: -260px;
-    bottom: -260px;
-
-    border-radius: 50%;
-
-    background:
-
-        radial-gradient(circle,
-            rgba(61, 217, 255, .16),
-            transparent 70%);
-
-    filter: blur(90px);
-
-    animation: auroraRight 16s ease-in-out infinite;
-
+    padding: 60px 20px;
+    min-height: 100vh;
+    background: var(--github-bg);
 }
 
 /* ===========================================================
                     MAIN CARD
 =========================================================== */
-
 .github-calendar-card {
-
     position: relative;
-
     z-index: 5;
-
-    width: min(100%, 1180px);
-
-    padding: 42px;
-
-    overflow: hidden;
-
-    border-radius: 28px;
-
-    background:
-
-        linear-gradient(145deg,
-            rgba(20, 22, 38, .95),
-            rgba(17, 18, 30, .96));
-
-    backdrop-filter: blur(24px);
-
-    border:
-
-        1px solid rgba(255, 255, 255, .06);
-
-    box-shadow:
-
-        0 25px 70px rgba(0, 0, 0, .45);
-
-    transition: .45s ease;
-
-}
-
-/* ===========================================================
-                ANIMATED BORDER
-=========================================================== */
-
-.github-calendar-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: -2px;
-
-    border-radius: 30px;
-
-    padding: 2px;
-
-    background:
-
-        linear-gradient(120deg,
-            #7C5CFF,
-            #5B8CFF,
-            #3DD9FF,
-            #7C5CFF);
-
-    background-size: 300%;
-
-    animation: borderAnimation 8s linear infinite;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite: xor;
-
-    mask-composite: exclude;
-
-    pointer-events: none;
-
+    width: min(100%, 1200px);
+    padding: 32px 32px 40px;
+    border-radius: 12px;
+    background: var(--github-card);
+    border: 1px solid var(--github-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
 }
 
 /* ===========================================================
                     HEADER
 =========================================================== */
-
 .github-calendar-header {
-
     display: flex;
-
     justify-content: space-between;
-
-    align-items: flex-end;
-
-    gap: 40px;
-
+    align-items: flex-start;
+    gap: 30px;
     flex-wrap: wrap;
-
-    margin-bottom: 45px;
-
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--github-border);
 }
 
-.github-calendar-label {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    padding: 8px 18px;
-
-    border-radius: 40px;
-
-    background: rgba(124, 92, 255, .12);
-
-    border: 1px solid rgba(124, 92, 255, .25);
-
-    font-size: .78rem;
-
-    font-weight: 700;
-
-    letter-spacing: .22em;
-
-    text-transform: uppercase;
-
-    color: #BCA9FF;
-
-    margin-bottom: 18px;
-
+.github-calendar-header-left {
+    flex: 1;
 }
 
 .github-calendar-header h2 {
-
-    font-size: clamp(2.3rem, 4vw, 3.4rem);
-
-    font-weight: 800;
-
-    line-height: 1.15;
-
-    margin-bottom: 15px;
-
-    background: linear-gradient(90deg,
-            #ffffff,
-            #D4CBFF,
-            #7C5CFF,
-            #5B8CFF);
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    font-weight: 600;
+    color: var(--github-white);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
 }
 
-.github-calendar-note {
+.github-calendar-header .subtitle {
+    font-size: 0.95rem;
+    color: var(--github-text-dim);
+    margin: 0;
+}
 
-    max-width: 560px;
-
-    font-size: 1rem;
-
-    line-height: 1.8;
-
-    color: #BFCBFF;
-
+.github-calendar-header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* ===========================================================
-                    STATS GRID
+                    STATS ROW (GitHub style)
 =========================================================== */
-
 .github-stats {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 22px;
-
-    margin-bottom: 42px;
-
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    padding: 16px 0 8px;
+    border-bottom: 1px solid var(--github-border);
 }
 
-/* ===========================================================
-                    STAT CARD
-=========================================================== */
-
-.github-stat-card {
-
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 28px 24px;
-
-    border-radius: 22px;
-
-    background:
-
-        linear-gradient(145deg,
-            rgba(255, 255, 255, .03),
-            rgba(255, 255, 255, .015));
-
-    border:
-
-        1px solid rgba(255, 255, 255, .06);
-
-    backdrop-filter: blur(16px);
-
-    transition: .35s;
-
-    cursor: pointer;
-
+.github-stat-item {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Top Gradient */
-
-.github-stat-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 4px;
-
-    background:
-
-        linear-gradient(90deg,
-            #7C5CFF,
-            #5B8CFF,
-            #3DD9FF);
-
+.github-stat-item .stat-number {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--github-white);
+    line-height: 1.2;
 }
 
-/* Glow */
-
-.github-stat-card::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-
-    height: 180px;
-
-    right: -90px;
-
-    top: -90px;
-
-    border-radius: 50%;
-
-    background:
-
-        rgba(124, 92, 255, .12);
-
-    filter: blur(45px);
-
-    transition: .4s;
-
-}
-
-/* Hover */
-
-.github-stat-card:hover {
-
-    transform:
-
-        translateY(-10px);
-
-    border-color:
-
-        rgba(124, 92, 255, .35);
-
-    box-shadow:
-
-        0 18px 40px rgba(124, 92, 255, .18);
-
-}
-
-.github-stat-card:hover::after {
-
-    transform: scale(1.3);
-
-}
-
-/* ===========================================================
-                    ICON
-=========================================================== */
-
-.stat-icon {
-
-    font-size: 30px;
-
-    margin-bottom: 18px;
-
-    color: #7C5CFF;
-
-    transition: .35s;
-
-}
-
-.github-stat-card:hover .stat-icon {
-
-    transform:
-
-        scale(1.2) rotate(-10deg);
-
-    color: #3DD9FF;
-
-}
-
-/* ===========================================================
-                    NUMBER
-=========================================================== */
-
-.github-stat-card h3 {
-
-    font-size: 2rem;
-
-    font-weight: 800;
-
-    margin-bottom: 8px;
-
-    color: white;
-
-}
-
-/* ===========================================================
-                    LABEL
-=========================================================== */
-
-.github-stat-card span {
-
-    display: block;
-
-    font-size: .95rem;
-
-    color: #BFCBFF;
-
-}
-
-/* ===========================================================
-                    RESPONSIVE
-=========================================================== */
-
-@media(max-width:992px) {
-
-    .github-stats {
-
-        grid-template-columns:
-
-            repeat(2, 1fr);
-
-    }
-
-}
-
-@media(max-width:640px) {
-
-    .github-stats {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .github-calendar-header h2 {
-
-        font-size: 2rem;
-
-    }
-
+.github-stat-item .stat-label {
+    font-size: 0.8rem;
+    color: var(--github-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* ===========================================================
                     CALENDAR CONTAINER
 =========================================================== */
-
 .github-calendar-wrapper {
-
     position: relative;
-
     overflow-x: auto;
-
     overflow-y: hidden;
-
-    padding: 28px;
-
-    border-radius: 24px;
-
-    background:
-        linear-gradient(145deg,
-            rgba(255, 255, 255, .04),
-            rgba(255, 255, 255, .02));
-
-    border: 1px solid rgba(255, 255, 255, .08);
-
-    backdrop-filter: blur(20px);
-
-    transition: .4s ease;
-
+    padding: 16px 4px 8px 4px;
+    border-radius: 6px;
+    background: transparent;
+    transition: 0.3s ease;
 }
-
-.github-calendar-wrapper:hover {
-
-    border-color: rgba(124, 92, 255, .25);
-
-    box-shadow:
-        0 20px 50px rgba(124, 92, 255, .18);
-
-}
-
-/* ===========================================================
-                SCROLLBAR
-=========================================================== */
 
 .github-calendar-wrapper::-webkit-scrollbar {
-
-    height: 10px;
-
+    height: 8px;
 }
 
 .github-calendar-wrapper::-webkit-scrollbar-track {
-
-    background: rgba(255, 255, 255, .04);
-
-    border-radius: 20px;
-
+    background: var(--github-bg);
+    border-radius: 10px;
 }
 
 .github-calendar-wrapper::-webkit-scrollbar-thumb {
+    background: var(--github-border);
+    border-radius: 10px;
+}
 
-    background:
-
-        linear-gradient(90deg,
-            #7C5CFF,
-            #5B8CFF,
-            #3DD9FF);
-
-    border-radius: 30px;
-
+.github-calendar-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--github-text-dim);
 }
 
 /* ===========================================================
-                CALENDAR
+                    CALENDAR - GitHub Green Theme
 =========================================================== */
-
 .github-calendar-wrapper .react-activity-calendar {
-
     width: 100%;
-
     margin: auto;
-
 }
 
-/* ===========================================================
-                MONTH LABELS
-=========================================================== */
-
+/* Month labels */
 .github-calendar-wrapper text {
-
-    fill: #D8E2FF !important;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: .03em;
-
+    fill: var(--github-text-dim) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
 }
 
-/* ===========================================================
-                WEEK LABELS
-=========================================================== */
-
+/* Week labels */
 .github-calendar-wrapper text:first-child {
-
-    font-size: 13px;
-
+    font-size: 11px !important;
+    fill: var(--github-text-dim) !important;
 }
 
 /* ===========================================================
-                CONTRIBUTION CELLS
+                CONTRIBUTION CELLS - Green Heatmap
 =========================================================== */
-
 .github-calendar-wrapper svg rect {
-
     cursor: pointer;
-
-    rx: 5;
-
-    ry: 5;
-
-    transition:
-
-        transform .28s ease,
-
-        filter .28s ease,
-
-        opacity .28s ease;
-
+    rx: 3;
+    ry: 3;
+    transition: all 0.15s ease;
+    shape-rendering: crispEdges;
 }
 
-/* ===========================================================
-                HOVER EFFECT
-=========================================================== */
+/* Level 0 - No contributions */
+.github-calendar-wrapper svg rect[data-level="0"] {
+    fill: #161b22 !important;
+}
 
+/* Level 1 - Light green */
+.github-calendar-wrapper svg rect[data-level="1"] {
+    fill: #0e4429 !important;
+}
+
+/* Level 2 - Medium green */
+.github-calendar-wrapper svg rect[data-level="2"] {
+    fill: #006d32 !important;
+}
+
+/* Level 3 - Dark green */
+.github-calendar-wrapper svg rect[data-level="3"] {
+    fill: #26a641 !important;
+}
+
+/* Level 4 - Deep green */
+.github-calendar-wrapper svg rect[data-level="4"] {
+    fill: #39d353 !important;
+}
+
+/* Hover effect */
 .github-calendar-wrapper svg rect:hover {
-
-    transform: scale(1.45);
-
-    transform-origin: center;
-
-    filter:
-
-        drop-shadow(0 0 8px rgba(124, 92, 255, .9)) drop-shadow(0 0 18px rgba(91, 140, 255, .45));
-
+    stroke: var(--github-text-dim) !important;
+    stroke-width: 2px !important;
+    rx: 4;
+    ry: 4;
+    filter: brightness(1.2);
 }
 
 /* ===========================================================
-                HEATMAP FADE
+                TOOLTIP - GitHub Style
 =========================================================== */
-
-.github-calendar-wrapper svg:hover rect {
-
-    opacity: .55;
-
-}
-
-.github-calendar-wrapper svg rect:hover {
-
-    opacity: 1 !important;
-
-}
-
-/* ===========================================================
-                TOOLTIP
-=========================================================== */
-
 .react-activity-calendar__tooltip {
+    background: var(--github-card-2) !important;
+    color: var(--github-white) !important;
+    padding: 8px 14px !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--github-border) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
 
-    background:
+.react-activity-calendar__tooltip strong {
+    color: var(--github-white);
+    font-weight: 600;
+}
 
-        linear-gradient(145deg,
-            #1b1d31,
-            #121421) !important;
+/* ===========================================================
+                LEGEND - GitHub Style
+=========================================================== */
+.github-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--github-border);
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 
-    color: white !important;
+.github-legend .legend-label {
+    font-size: 0.75rem;
+    color: var(--github-text-dim);
+    margin-right: 4px;
+}
 
-    padding: 12px 16px;
+.github-legend .legend-box {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+}
 
-    border-radius: 14px;
+.github-legend .legend-box.level-0 {
+    background: #161b22;
+}
+.github-legend .legend-box.level-1 {
+    background: #0e4429;
+}
+.github-legend .legend-box.level-2 {
+    background: #006d32;
+}
+.github-legend .legend-box.level-3 {
+    background: #26a641;
+}
+.github-legend .legend-box.level-4 {
+    background: #39d353;
+}
 
-    border: 1px solid rgba(124, 92, 255, .35);
+/* ===========================================================
+                RESPONSIVE
+=========================================================== */
+@media (max-width: 768px) {
+    .github-calendar-section {
+        padding: 40px 16px;
+    }
 
-    backdrop-filter: blur(18px);
+    .github-calendar-card {
+        padding: 20px 16px 28px;
+    }
 
-    box-shadow:
+    .github-calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
 
-        0 18px 40px rgba(0, 0, 0, .35);
+    .github-calendar-header-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
 
-    font-size: .9rem;
+    .github-stats {
+        gap: 24px;
+        padding: 12px 0 4px;
+    }
 
-    font-weight: 500;
+    .github-stat-item .stat-number {
+        font-size: 1.3rem;
+    }
 
+    .github-calendar-wrapper {
+        padding: 8px 0 4px;
+    }
+
+    .github-legend {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .github-stats {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .github-stat-item {
+        flex: 1 0 calc(50% - 16px);
+    }
+
+    .github-stat-item .stat-number {
+        font-size: 1.1rem;
+    }
+
+    .github-calendar-header h2 {
+        font-size: 1.3rem;
+    }
 }
 
 /* ===========================================================
                 CALENDAR ENTRANCE
 =========================================================== */
-
 .github-calendar-wrapper {
-
-    animation:
-
-        calendarFade .9s ease;
-
+    animation: calendarFade 0.6s ease;
 }
 
 @keyframes calendarFade {
-
     0% {
-
         opacity: 0;
-
-        transform:
-
-            translateY(40px);
-
+        transform: translateY(12px);
     }
-
     100% {
-
         opacity: 1;
-
-        transform:
-
-            translateY(0);
-
+        transform: translateY(0);
     }
+}
 
+/* ===========================================================
+                ADDITIONAL FIXES for GitHub look
+=========================================================== */
+/* Make the calendar take full width */
+.github-calendar-wrapper svg {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Ensure consistent cell sizing */
+.github-calendar-wrapper svg rect {
+    stroke: var(--github-bg) !important;
+    stroke-width: 2px !important;
+}
+
+/* Remove any unwanted backgrounds or glows */
+.github-calendar-section::before,
+.github-calendar-section::after {
+    display: none !important;
+}
+
+/* Clean card appearance - no fancy gradients or glows */
+.github-calendar-card::before {
+    display: none !important;
+}
+
+/* Remove backdrop filters for better performance and cleaner look */
+.github-calendar-card {
+    backdrop-filter: none !important;
+}
+
+/* Clean stat cards - no gradients or glows */
+.github-stat-card {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    cursor: default !important;
+}
+
+.github-stat-card::before,
+.github-stat-card::after {
+    display: none !important;
+}
+
+.github-stat-card:hover {
+    transform: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.stat-icon {
+    display: none !important;
 }
