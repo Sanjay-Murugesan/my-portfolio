@@ -4,7 +4,7 @@
 =========================================================== */
 
 :root {
-    --github-bg: #0d1117;
+    --github-bg: #1c4129;
     --github-card: #161b22;
     --github-card-2: #1c2333;
     --github-border: #30363d;
@@ -262,15 +262,19 @@
 .github-legend .legend-box.level-0 {
     background: #161b22;
 }
+
 .github-legend .legend-box.level-1 {
     background: #0e4429;
 }
+
 .github-legend .legend-box.level-2 {
     background: #006d32;
 }
+
 .github-legend .legend-box.level-3 {
     background: #26a641;
 }
+
 .github-legend .legend-box.level-4 {
     background: #39d353;
 }
@@ -347,6 +351,7 @@
         opacity: 0;
         transform: translateY(12px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);

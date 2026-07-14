@@ -1,61 +1,128 @@
 import React from "react";
+import {
+  FaSeedling,
+  FaBookOpen,
+  FaLaptopCode,
+  FaRocket,
+  FaBullseye,
+} from "react-icons/fa";
+import "./MyJourney.css";
+const journeyData = [
+  {
+    year: "2023",
+    icon: <FaSeedling />,
+    title: "The Beginning",
+    description:
+      "Started with curiosity about how websites work. That curiosity slowly became a passion for programming and technology.",
+  },
+  {
+    year: "2024",
+    icon: <FaBookOpen />,
+    title: "Building Strong Foundations",
+    description:
+      "Focused on Java, Object-Oriented Programming, Data Structures, Algorithms, SQL, and problem-solving instead of rushing into frameworks.",
+  },
+  {
+    year: "2025",
+    icon: <FaLaptopCode />,
+    title: "Building Real Projects",
+    description:
+      "Developed full-stack applications using React, Spring Boot, REST APIs, MySQL, and AI-powered solutions to solve real-world problems.",
+  },
+  {
+    year: "2026",
+    icon: <FaRocket />,
+    title: "Continuous Growth",
+    description:
+      "Improving every day by practicing DSA, learning System Design, writing cleaner code, and building scalable applications.",
+  },
+  {
+    year: "Future",
+    icon: <FaBullseye />,
+    title: "The Next Chapter",
+    description:
+      "Looking forward to contributing to impactful software, collaborating with talented teams, and growing into a skilled Software Engineer.",
+  },
+];
 
 const MyJourney = () => {
   return (
-    <section className="journey">
-      <h2>My Journey</h2>
-      <p className="journey-sub">
-        Not just skills — this is how I grew as a developer.
-      </p>
+    <section className="journey-section" id="journey">
 
-      <div className="journey-track">
+      <div className="journey-bg-1"></div>
+      <div className="journey-bg-2"></div>
 
-        <div className="journey-step">
-          <span className="dot"></span>
-          <h3>Started Curious</h3>
-          <p>
-            Began my journey exploring how websites work and got interested in
-            programming fundamentals.
-          </p>
-        </div>
+      <div className="journey-header">
 
-        <div className="journey-step">
-          <span className="dot"></span>
-          <h3>Learned the Core</h3>
-          <p>
-            Built strong foundations in Java, databases, and web technologies
-            instead of jumping only into frameworks.
-          </p>
-        </div>
+        <span className="journey-badge">
+          MY JOURNEY
+        </span>
 
-        <div className="journey-step">
-          <span className="dot"></span>
-          <h3>Built Real Projects</h3>
-          <p>
-            Developed full-stack projects using React, Spring Boot, and MySQL
-            with real-world use cases.
-          </p>
-        </div>
+        <h2>
+          Every Step Made Me
+          <span> Better.</span>
+        </h2>
 
-        <div className="journey-step">
-          <span className="dot"></span>
-          <h3>Now</h3>
-          <p>
-            Actively preparing for internships and placements while improving
-            problem-solving and system design skills.
-          </p>
-        </div>
-
-        <div className="journey-step highlight">
-          <span className="dot"></span>
-          <h3>What’s Next?</h3>
-          <p>
-            Contributing to impactful projects, learning advanced backend
-            systems, and growing as a professional developer.
-          </p>
-        </div>
+        <p>
+          Every project, challenge, and late-night debugging session has
+          shaped the developer I am today.
+        </p>
 
       </div>
+
+      <div className="timeline">
+
+        {journeyData.map((item, index) => (
+
+          <div
+            className={`timeline-item ${index % 2 === 0 ? "left" : "right"
+              }`}
+            key={index}
+          >
+
+            <div className="timeline-dot">
+
+              <div className="icon">
+                {item.icon}
+              </div>
+
+            </div>
+
+            <div className="timeline-card">
+
+              <span className="timeline-year">
+                {item.year}
+              </span>
+
+              <h3>
+                {item.title}
+              </h3>
+
+              <p>
+                {item.description}
+              </p>
+
+            </div>
+
+          </div>
+
+        ))}
+
+      </div>
+
+      <div className="journey-footer">
+
+        <h3>The Journey Continues...</h3>
+
+        <p>
+          Every challenge helps me grow as a developer.
+          I enjoy building software that is clean,
+          scalable, and meaningful.
+          This is only the beginning of my journey.
+        </p>
+
+      </div>
+
     </section>
   );
 };

@@ -183,7 +183,7 @@
 
   justify-content: flex-start;
 
-  height: 300px;
+  height: 250px;
 
   padding: 28px;
 
@@ -211,11 +211,9 @@
 
   inset: 0;
 
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,.15),
-    transparent 45%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, .15),
+      transparent 45%);
 
   opacity: 0;
 
@@ -234,11 +232,11 @@
 .hw-card:hover {
   transform: translateY(-10px);
 
-  border-color: rgba(139,92,246,.55);
+  border-color: rgba(139, 92, 246, .55);
 
   box-shadow:
-    0 18px 40px rgba(0,0,0,.35),
-    0 0 25px rgba(139,92,246,.18);
+    0 18px 40px rgba(0, 0, 0, .35),
+    0 0 25px rgba(139, 92, 246, .18);
 }
 
 /* ===========================================
@@ -246,11 +244,11 @@
 =========================================== */
 
 .hw-card--glass {
-  background: rgba(255,255,255,.06);
+  background: rgba(255, 255, 255, .06);
 }
 
 .hw-card--purple {
-  background: linear-gradient(145deg,#7c3aed,#4c1d95);
+  background: linear-gradient(145deg, #7c3aed, #4c1d95);
   border: none;
 }
 
@@ -259,7 +257,7 @@
 }
 
 .hw-card--teal {
-  background: linear-gradient(145deg,#0f766e,#115e59);
+  background: linear-gradient(145deg, #0f766e, #115e59);
   border: none;
 }
 
@@ -276,7 +274,7 @@
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
 
   color: #ddd;
 
@@ -305,7 +303,7 @@
 
   margin-bottom: 20px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
 }
 
 .hw-icon-wrap--purple {
