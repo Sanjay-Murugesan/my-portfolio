@@ -1,6 +1,6 @@
 import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
-import { FaGithub, FaCodeBranch, FaCode, FaFire } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import "./GithubContributions.css";
 
 const GithubContributions = () => {

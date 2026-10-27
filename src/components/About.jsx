@@ -1,18 +1,5 @@
 import "./About.css";
 
-const skills = [
-  "Java",
-  "React",
-  "Spring Boot",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "SQL",
-  "REST API",
-  "Swagger",
-  "Git",
-];
-
 export default function About() {
   return (
     <section className="ab-section" id="about">
