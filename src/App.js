@@ -12,6 +12,7 @@ import HowIWork from "./components/HowIWork";
 import HowIAddValue from "./components/HowIAddValue";
 import GithubContributions from "./components/GithubContributions";
 
+import Navbar from "./components/Navbar";
 import useScrollEffects from "./hooks/useScrollEffects";
 
 function App() {
@@ -23,17 +24,7 @@ function App() {
     <div className="app">
 
       {/* NAVBAR */}
-      <nav className="navbar">
-        <h2 className="logo">Sanjay</h2>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* SECTIONS */}
       <Home />

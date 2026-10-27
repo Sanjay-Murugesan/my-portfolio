@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HowIWork.css";
 
 /* ── Data ───────────────── */
@@ -8,17 +8,14 @@ const CARDS = [
     step: "Step 01",
     icon: "🧠",
     iconVariant: "purple",
-    cardVariant: "purple",
     title: "Problem Understanding",
     body: "I analyze problems deeply and plan structured solutions before coding.",
-    size: "big",
   },
   {
     id: "design",
     step: "Step 02",
     icon: "🎨",
     iconVariant: "pink",
-    cardVariant: "glass",
     title: "UI / UX Design",
     body: "Clean, responsive, and user-focused interfaces.",
   },
@@ -27,17 +24,14 @@ const CARDS = [
     step: "Step 03",
     icon: "⚙️",
     iconVariant: "teal",
-    cardVariant: "dark",
     title: "Backend Development",
     body: "Secure APIs with Spring Boot and efficient database design.",
-    size: "wide",
   },
   {
     id: "testing",
     step: "Step 04",
     icon: "🧪",
     iconVariant: "amber",
-    cardVariant: "glass",
     title: "Testing & Optimization",
     body: "Testing, debugging, and performance tuning.",
   },
@@ -45,8 +39,7 @@ const CARDS = [
     id: "integration",
     step: "Step 05",
     icon: "🔗",
-    iconVariant: "amber",
-    cardVariant: "glass",
+    iconVariant: "cyan",
     title: "System Integration",
     body: "Seamless frontend-backend communication.",
   },
@@ -55,10 +48,8 @@ const CARDS = [
     step: "Step 06",
     icon: "🚀",
     iconVariant: "purple",
-    cardVariant: "teal",
     title: "Continuous Improvement",
     body: "Learning and improving with every project.",
-    size: "big",
   },
 ];
 
@@ -71,31 +62,35 @@ function HowCard({ card, index }) {
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setVisible(true), index * 100);
+          setTimeout(() => setVisible(true), index * 90);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
-    io.observe(ref.current);
+    if (ref.current) {
+      io.observe(ref.current);
+    }
     return () => io.disconnect();
   }, [index]);
 
   return (
     <div
       ref={ref}
-      className={`hw-card hw-card--${card.cardVariant} 
-      ${card.size === "big" ? "big" : ""} 
-      ${card.size === "wide" ? "wide" : ""} 
-      ${visible ? "hw-visible" : ""}`}
+      className={`hw-card hw-card--${card.iconVariant} ${visible ? "hw-visible" : ""}`}
     >
-      <span className="hw-step-badge">{card.step}</span>
-
-      <div className={`hw-icon-wrap hw-icon-wrap--${card.iconVariant}`}>
-        {card.icon}
+      <div className="hw-card-top">
+        <span className="hw-step-badge">{card.step}</span>
+        <div className={`hw-icon-wrap hw-icon-wrap--${card.iconVariant}`}>
+          {card.icon}
+        </div>
       </div>
 
-      <h3>{card.title}</h3>
-      <p>{card.body}</p>
+      <div className="hw-card-body">
+        <h3>{card.title}</h3>
+        <p>{card.body}</p>
+      </div>
+
+      <div className="hw-card-glow" />
     </div>
   );
 }
@@ -103,8 +98,7 @@ function HowCard({ card, index }) {
 /* ── Main Component ───────────────── */
 function HowIWork() {
   return (
-    <section className="hw-section hw-root">
-
+    <section className="hw-section hw-root" id="work">
       <div className="hw-header">
         <p className="hw-eyebrow">
           <span /> Workflow <span />
@@ -124,7 +118,6 @@ function HowIWork() {
           <HowCard key={card.id} card={card} index={i} />
         ))}
       </div>
-
     </section>
   );
 }
